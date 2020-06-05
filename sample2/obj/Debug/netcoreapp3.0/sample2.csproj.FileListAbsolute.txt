@@ -1,0 +1,11 @@
+C:\Users\Lenovo User\Documents\code\TRSF\sample2\bin\Debug\netcoreapp3.0\sample2.exe
+C:\Users\Lenovo User\Documents\code\TRSF\sample2\bin\Debug\netcoreapp3.0\sample2.deps.json
+C:\Users\Lenovo User\Documents\code\TRSF\sample2\bin\Debug\netcoreapp3.0\sample2.runtimeconfig.json
+C:\Users\Lenovo User\Documents\code\TRSF\sample2\bin\Debug\netcoreapp3.0\sample2.runtimeconfig.dev.json
+C:\Users\Lenovo User\Documents\code\TRSF\sample2\bin\Debug\netcoreapp3.0\sample2.dll
+C:\Users\Lenovo User\Documents\code\TRSF\sample2\bin\Debug\netcoreapp3.0\sample2.pdb
+C:\Users\Lenovo User\Documents\code\TRSF\sample2\obj\Debug\netcoreapp3.0\sample2.csprojAssemblyReference.cache
+C:\Users\Lenovo User\Documents\code\TRSF\sample2\obj\Debug\netcoreapp3.0\sample2.AssemblyInfoInputs.cache
+C:\Users\Lenovo User\Documents\code\TRSF\sample2\obj\Debug\netcoreapp3.0\sample2.AssemblyInfo.cs
+C:\Users\Lenovo User\Documents\code\TRSF\sample2\obj\Debug\netcoreapp3.0\sample2.dll
+C:\Users\Lenovo User\Documents\code\TRSF\sample2\obj\Debug\netcoreapp3.0\sample2.pdb
