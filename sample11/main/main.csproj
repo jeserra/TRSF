@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="sample8bis\sample8bis.csproj" />
+    <ProjectReference Include="..\library\library.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

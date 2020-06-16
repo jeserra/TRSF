@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo User\\Documents\\code\\TRSF\\sample5\\sample5.csproj": {}
+    "c:\\Users\\Lenovo User\\Documents\\code\\TRSF\\sample5\\sample5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo User\\Documents\\code\\TRSF\\sample5\\sample5.csproj": {
+    "c:\\Users\\Lenovo User\\Documents\\code\\TRSF\\sample5\\sample5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo User\\Documents\\code\\TRSF\\sample5\\sample5.csproj",
+        "projectUniqueName": "c:\\Users\\Lenovo User\\Documents\\code\\TRSF\\sample5\\sample5.csproj",
         "projectName": "sample5",
-        "projectPath": "C:\\Users\\Lenovo User\\Documents\\code\\TRSF\\sample5\\sample5.csproj",
+        "projectPath": "c:\\Users\\Lenovo User\\Documents\\code\\TRSF\\sample5\\sample5.csproj",
         "packagesPath": "C:\\Users\\Lenovo User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo User\\Documents\\code\\TRSF\\sample5\\obj\\",
+        "outputPath": "c:\\Users\\Lenovo User\\Documents\\code\\TRSF\\sample5\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
