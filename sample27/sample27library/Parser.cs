@@ -4,10 +4,10 @@ namespace sample27library
 {
     public class Parser
     {
-        public Transaction ParseSource (string Source)
+        public TradeRecord ParseSource (string Source)
         {
             var listStrings  = Source.Split(',');
-            var transaccion = new Transaction();
+            var transaccion = new TradeRecord();
             transaccion.id = int.Parse( listStrings[0]);
             transaccion.Operation = listStrings[1];
             transaccion.Amount = decimal.Parse(listStrings[2]);

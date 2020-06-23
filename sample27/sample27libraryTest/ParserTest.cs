@@ -12,7 +12,7 @@ namespace sample27libraryTest
         {
             Parser parser = new Parser();
             var result = parser.ParseSource("1,Sale,120,01-01-2000");
-            Assert.IsType(typeof(Transaction), result);
+            Assert.IsType(typeof(TradeRecord), result);
         }
 
         [Theory]
@@ -23,7 +23,7 @@ namespace sample27libraryTest
         {
             Parser parser = new Parser();
             var result = parser.ParseSource(data);
-            Assert.IsType(typeof(Transaction), result);
+            Assert.IsType(typeof(TradeRecord), result);
         }
 
         [Theory]
@@ -34,7 +34,7 @@ namespace sample27libraryTest
         {
             Parser parser = new Parser();
             var result = parser.ParseSource(data);
-            Assert.IsType(typeof(Transaction), result);
+            Assert.IsType(typeof(TradeRecord), result);
         }
 
 
