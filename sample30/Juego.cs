@@ -36,6 +36,7 @@ namespace sample30
         public virtual int Avanzar(int lanzamiento, int casillaActual)
         {
             int nuevaCasilla =  casillaActual + lanzamiento;
+ 
             if(casillasSerpientes.TryGetValue(nuevaCasilla, out int nuevaCasillaSerpiente))
             {
                 
