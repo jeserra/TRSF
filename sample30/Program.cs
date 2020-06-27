@@ -7,13 +7,25 @@ namespace sample30
         static void Main(string[] args)
         {
              Juego juego = new Juego();
-             juego.jugador1 = new Jugador();
-             juego.jugador1.Avanzar+= juego.RevisarAvance;
-             juego.jugador2 = new Jugador();
-             juego.jugador2.Avanzar += juego.RevisarAvance;
+             juego.Jugadores.Add(new Jugador(1));
+             juego.Jugadores.Add(new Jugador(2));
+             juego.Jugadores.Add(new Jugador(3));
 
-             juego.jugador1.Play(6);
-             juego.jugador2.Play(20);
+             foreach(var item in juego.Jugadores)
+             {
+                item.LanzarDados+=juego.TirarDados;
+                item.Avanzar+=juego.Avanzar;
+             }
+
+             while(!juego.Finalizado)
+             {
+                 foreach(var item in juego.Jugadores)
+                 {
+                    item.Play();
+                    if (juego.Finalizado)
+                        break;
+                 }
+             }
                        
         }
     }
