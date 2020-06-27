@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
+using sample30.ReglasSerpientes;
+
 using static System.Console;
+
 namespace sample30
 {
     public class Juego 
@@ -10,21 +13,22 @@ namespace sample30
             Jugadores = new List<Jugador>();
             CasillaMeta = 100;
             Finalizado = false;
+            
+            var reglaMeta = new ReglaMeta(CasillaMeta);
+
+            Reglas = new List<IRegla>
+            {
+                new ReglaEscaleras(),
+                new ReglaSerpientes(),
+                reglaMeta
+            };
+              
         }
 
         protected int CasillaMeta  {get;set;}
         public List<Jugador> Jugadores {get;set;}
+        public List<IRegla> Reglas {get;set;}
         public bool Finalizado {get;set;}
-        private Dictionary<int, int> casillasSerpientes = new Dictionary<int, int>
-        {
-            {41,1}, {44,8}, {49,14}
-        };
-
-        private Dictionary <int, int> casillasEscaleras = new Dictionary<int, int>
-        {
-            {12, 30}, {51, 60}, {57,76},{76,85}, {78,100}
-        };
-        
 
         public virtual int TirarDados ()
         {
@@ -36,30 +40,20 @@ namespace sample30
         public virtual int Avanzar(int lanzamiento, int casillaActual)
         {
             int nuevaCasilla =  casillaActual + lanzamiento;
- 
-            if(casillasSerpientes.TryGetValue(nuevaCasilla, out int nuevaCasillaSerpiente))
+            foreach(var regla in Reglas)
             {
-                
-                WriteLine($"Has caido en una serpiente, bajas desde la casilla  {nuevaCasilla} hasta la casilla {nuevaCasillaSerpiente}");
-                nuevaCasilla = nuevaCasillaSerpiente;
+                if(regla.EsCasillaEspecial(nuevaCasilla, out int nuevaCasillaMasRegla))
+                {
+                    nuevaCasilla = nuevaCasillaMasRegla;   
+                    break;
+                }
             }
-            else if(casillasEscaleras.TryGetValue(nuevaCasilla, out int nuevaCasillaEscalera))
-            {
-                WriteLine($"Has caido en una escalera, subes desde la casilla  {nuevaCasilla} hasta la casilla {nuevaCasillaEscalera}");
-                nuevaCasilla = nuevaCasillaEscalera;
-            }
-            else if(nuevaCasilla > CasillaMeta )
-            {
-                nuevaCasilla = CasillaMeta - (nuevaCasilla - CasillaMeta);
-            } 
-
             if(nuevaCasilla == CasillaMeta)
             {
                 WriteLine ("Ha ganado!!");
                 Finalizado = true;
             }
-            return nuevaCasilla;
-           
+            return nuevaCasilla;  
         }
     }
 }

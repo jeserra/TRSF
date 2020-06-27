@@ -1,5 +1,5 @@
 ﻿using System;
-
+using static System.Console;
 namespace sample30
 {
     class Program
@@ -17,8 +17,10 @@ namespace sample30
                 item.Avanzar+=juego.Avanzar;
              }
 
+            int i=0;
              while(!juego.Finalizado)
              {
+                 WriteLine($"===== Turno {i++} ======  ");
                  foreach(var item in juego.Jugadores)
                  {
                     item.Play();
