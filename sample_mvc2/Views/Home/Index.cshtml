@@ -2,10 +2,17 @@
     ViewData["Title"] = "Home Page";
 }
 
+
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <div>
         Vamos a tener una fiesta!!
     </div>
-    <a asp-action="RsvpForm">RSVP Form</a>
+    <a class="btn btn-primary" asp-action="RsvpForm">RSVP Form</a>
 </div>
+</body>
