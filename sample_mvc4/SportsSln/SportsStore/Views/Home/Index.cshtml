@@ -1,2 +1,11 @@
  
-<h4>Welcome to SportsStore</h4>
+@model IQueryable<SportsStore.Models.Product>
+
+@foreach (var item in Model)
+{
+    <div>
+        <h3>@item.Name</h3>
+        @item.Description
+        <h4>@item.Price.ToString("c")</h4>
+    </div>
+}
