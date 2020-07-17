@@ -10,6 +10,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using SportsStore.Models;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace SportsStore
 {
@@ -43,12 +45,17 @@ namespace SportsStore
             }
 
             app.UseStatusCodePages();
+            
             app.UseStaticFiles();
+
 
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
+                 endpoints.MapControllerRoute("pagination",
+                    "Products/Page{productPage}",
+                    new { Controller = "Home", action = "Index" });
                endpoints.MapDefaultControllerRoute();
             });
 
